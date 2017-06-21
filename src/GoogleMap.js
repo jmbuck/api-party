@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import apiKey from './key'
+import { mapsKey } from './keys'
 
 class GoogleMap extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class GoogleMap extends Component {
     }
 
     setUrl = (place) => {
-        this.setState({ url: `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${place}` })
+        this.setState({ url: `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${place}` })
     }
 
     componentWillReceiveProps(nextProps) {
